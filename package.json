@@ -1,0 +1,32 @@
+{
+  "family": "jquery",
+  "name": "jquery.html5Validate",
+  "version": "1.0.0",
+  "description": "The best project ever.",
+  "homepage": "https://github.com/Kevin/html5Validate",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Kevin/html5Validate.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": ["widget"],
+  "licenses": "MIT",
+  "spm": {
+    "output": ["jquery.html5Validate.js"],
+    "alias": {
+    	"jquery": "jquery/jquery/2.1.0/jquery",
+    	"seajs": "seajs/seajs/2.1.0/seajs"
+    },
+    "engines": {}
+  },
+   "devDependencies": {
+    	"grunt": "~0.4.1",
+    	"grunt-cmd-transport": "~0.4.1",
+    	"grunt-cmd-concat": "~0.2.5",
+    	"grunt-contrib-uglify": "~0.2.7",
+    	"grunt-contrib-clean": "~0.5.0"
+    }
+}

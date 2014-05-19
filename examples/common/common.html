@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> Test - COMMONJS & SEAJS </title>
+	<meta name="Generator" content="EditPlus">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link href="common.css" type="text/css" rel="Stylesheet" />
+	<script src="../../sea-modules/seajs/seajs/2.1.0/sea.js"></script>
+	<script src="seajs.config.js"></script>
+</head>
+<body>
+	<div class="mt10"><a data-selector="J_btn1" class="btn inline-block" href="javascript:void(0)">alert</a></div>
+	<script>
+	var mode = location.href.indexOf('production=true') > -1;
+	if(!mode){
+		seajs.use(['../../src/common/js/a_b','../../src/common/ui/dialog/dialog', 'jquery'],function(ab,dialog, $){
+			console.dir(ab);
+			var a = ab.a, b = ab.b;
+			$('a[data-selector="J_btn1"]').click(function(){
+				a.show();
+				b.show();
+				dialog.show();
+			});
+
+		});
+	}else{
+		seajs.use(['dist/common/js/a_b','dist/common/ui/dialog/dialog.js', 'jquery'],function(ab, dialog, $){
+		    console.dir(ab);
+			var a = ab.a, b = ab.b;
+			$('a[data-selector="J_btn1"]').click(function(){
+				a.show();
+				b.show();
+				dialog.show();
+			});
+
+		});
+	}
+	</script>
+</body>
+</html>

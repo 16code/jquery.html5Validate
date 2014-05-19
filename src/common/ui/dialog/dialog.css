@@ -1,0 +1,8 @@
+@charset "utf-8";
+.pop_mark, .pop_mark_ifrmae { width: 100%; height: 100%; /*position:absolute;*/ position: fixed; left: 0; top: 0; z-index: 9999; filter: alpha(opacity=0); -maz-opacity: 0; opacity: 0; border:0;}
+.pop_mark { background: #000; filter: alpha(opacity=50); -maz-opacity: 0.5; opacity: 0.5; z-index: 10000; }
+.pop { border: 1px solid #ccc; position: fixed; display: none; _position: absolute; z-index: 10001; background-color: #fff; }
+.pop_hd { height: 38px; border-bottom: 1px solid #333; line-height: 38px; padding: 0 5px 0 10px;  }
+.pop_hd .pop_close { height: 8px; width: 8px; display: block; float: right; margin: 15px 10px 0 0; background: url(./images/dialogClose.png) no-repeat; cursor: pointer; }
+.pop_bd{padding:20px;}
+.pop_ft { padding: 0px 15px 15px 0px; text-align: right; }
